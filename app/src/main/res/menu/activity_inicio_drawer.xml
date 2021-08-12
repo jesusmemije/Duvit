@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navTareas"
+            android:icon="@drawable/ic_menu_tareas_descripcion"
+            android:title="@string/tareas" />
+        <item
+            android:id="@+id/navProyectos"
+            android:icon="@drawable/ic_menu_proyectos"
+            android:title="@string/proyectos" />
+        <item
+            android:id="@+id/navTareasLista"
+            android:icon="@drawable/ic_menu_tareas_lista"
+            android:title="@string/lista_de_tareas" />
+        <item
+            android:id="@+id/navPuntuacion"
+            android:icon="@drawable/ic_menu_puntuacion"
+            android:title="@string/puntuaci_n" />
+        <item
+            android:id="@+id/navEstadisticas"
+            android:icon="@drawable/ic_menu_estadisticas"
+            android:title="@string/estad_sticas" />
+
+        <item
+            android:id="@+id/navReuniones"
+            android:icon="@drawable/ic_menu_reuniones"
+            android:title="@string/reuniones" />
+
+        <item
+            android:id="@+id/navJugar"
+            android:icon="@drawable/ic_menu_play"
+            android:title="@string/jugar" />
+
+        <item android:title="@string/configuraci_n">
+            <menu>
+                <item
+                    android:id="@+id/navModoOscuro"
+                    android:icon="@drawable/ic_menu_luna"
+                    android:title="@string/modo_oscuro"
+                    app:actionLayout="@layout/switch_claro_oscuro" />
+                <item
+                    android:id="@+id/navAcercade"
+                    android:icon="@drawable/ic_menu_acercade"
+                    android:title="@string/acerca_de" />
+                <item
+                    android:id="@+id/navCerraSesion"
+                    android:icon="@drawable/ic_toolbar_exit"
+                    android:title="@string/cerrar_sesi_n" />
+            </menu>
+        </item>
+    </group>
+</menu>

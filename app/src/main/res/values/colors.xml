@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#94288e</color>
+    <color name="colorPrimaryDark">#94288e</color>
+    <color name="colorAccent">#94288e</color>
+
+    <color name="bg_white">#FCFDFE</color>
+    <color name="font_black">#6D6670</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorBlackGris">#444</color>
+    <color name="colorAzul">#2980b9</color>
+    <color name="pin_azul">#019dd5</color>
+    <color name="color777">#777</color>
+    <color name="colorMorado">#460733</color>
+    <color name="colorThemeLight">#F4F4F6</color>
+    <color name="colorThemeDark">#33343B</color>
+
+</resources>

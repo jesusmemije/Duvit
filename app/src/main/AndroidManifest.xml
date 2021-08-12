@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pice.duvit">
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!--<supports-screens
+        android:anyDensity="true"
+        android:largeScreens="false"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:xlargeScreens="false" />-->
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/name_app"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode"
+        tools:targetApi="n">
+        <activity android:name=".NAVEGACION.JugarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity android:name=".NAVEGACION.IntegrantesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".NAVEGACION.ProyectosActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".NAVEGACION.ZoomActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".NAVEGACION.SintareasActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+
+        <activity
+            android:name=".NAVEGACION.TareasProyectoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".NAVEGACION.PuntuacionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".NAVEGACION.EstadisticasActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".NAVEGACION.ListaTareasActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight" />
+        <activity
+            android:name=".ACCESO.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ACCESO.LoginActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NAVEGACION.DetallesTareasActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FeedActivityThemeLight"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".NAVEGACION.HomeNavegacionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+
+        <receiver android:name=".CLASES.AlarmReceiverEntrada" />
+        <receiver android:name=".CLASES.AlarmReceiverSalida" />
+
+        <!-- Set custom default icon. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_icon_notification" />
+        <!-- Set color used with incoming notification messages. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <service
+            android:name=".CLASES.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
